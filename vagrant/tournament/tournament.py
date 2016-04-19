@@ -20,6 +20,7 @@ def deleteMatches():
     db.commit()
     db.close()
 
+
 def deletePlayers():
     """Remove all the player records from the database."""
     db = connect()
@@ -43,6 +44,7 @@ def countPlayers():
     db.close()
 
     return count
+
 
 def registerPlayer(name):
     """Adds a player to the tournament database.
@@ -117,13 +119,11 @@ def swissPairings():
     pairings = []
     for i in range(0, len(standings) - 1, 2):
         pairings.append((
-            standings[i][0],
-            standings[i][1],
-            standings[i + 1][0],
-            standings[i + 1][1]
+            standings[i][0],        # player1's id
+            standings[i][1],        # player1's name
+            standings[i + 1][0],    # player2's id
+            standings[i + 1][1]     # player2's name
         ))
 
     return pairings
-
-
 

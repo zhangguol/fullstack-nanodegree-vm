@@ -59,9 +59,3 @@ FROM players
 GROUP BY players.id
 ORDER BY wins DESC;
 
-
-
-
-
-
-
